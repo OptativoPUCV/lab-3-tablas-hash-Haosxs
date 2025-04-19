@@ -55,7 +55,13 @@ void insertMap(HashMap * map, char * key, void * value)
 
             nuevoPair->key = key;
             nuevoPair->value = value;
+            map->buckets[indice] = nuevoPair;
+            map->size++;
+            map->current = indice;
         }  
+        if (currentPair->key != NULL && strcmp(currentPair->key, key) == 0) return;
+
+        indice = (indice + 1) % map->capacity;
     } while (indice != copiaindice);
 }
 
