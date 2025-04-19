@@ -42,3 +42,43 @@ Sat, Apr 19, 2025  7:48:15 PM:
  tests:  1|5
 total_score: 10/70
 0d5908e
+Sat, Apr 19, 2025  7:55:13 PM: 
+ hashmap.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:58:1: error: expected 'while' before '}' token
+ }
+ ^
+test.c:453:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:511:1: error: expected declaration or statement at end of input
+ }
+ ^
+In file included from test.c:4:0:
+hashmap.c:44:10: error: unused variable 'copiaindice' [-Werror=unused-variable]
+     long copiaindice = indice;
+          ^~~~~~~~~~~
+At top level:
+test.c:453:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:217:5: error: 'insert_test5' defined but not used [-Werror=unused-function]
+ int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+     ^~~~~~~~~~~~
+test.c:131:6: error: 'compare_test' defined but not used [-Werror=unused-function]
+ void compare_test(){
+      ^~~~~~~~~~~~
+test.c:125:6: error: 'hash_test3' defined but not used [-Werror=unused-function]
+ void hash_test3(){ //no random
+      ^~~~~~~~~~
+test.c:111:6: error: 'hash_test2' defined but not used [-Werror=unused-function]
+ void hash_test2(){ // colisiones
+      ^~~~~~~~~~
+test.c:100:6: error: 'hash_test1' defined but not used [-Werror=unused-function]
+ void hash_test1(){ // posición válida
+      ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+886e200
