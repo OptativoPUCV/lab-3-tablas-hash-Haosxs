@@ -82,3 +82,9 @@ test.c:100:6: error: 'hash_test1' defined but not used [-Werror=unused-function]
       ^~~~~~~~~~
 cc1.exe: all warnings being treated as errors
 886e200
+Sat, Apr 19, 2025  7:56:15 PM: 
+ hashmap.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+ tests:  1|5
+total_score: 10/70
+a7d4e31
