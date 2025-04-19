@@ -58,6 +58,7 @@ void insertMap(HashMap * map, char * key, void * value)
             map->buckets[indice] = nuevoPair;
             map->size++;
             map->current = indice;
+            return;
         }  
         if (currentPair->key != NULL && strcmp(currentPair->key, key) == 0) return;
 
