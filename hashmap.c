@@ -68,6 +68,10 @@ void insertMap(HashMap * map, char * key, void * value)
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
+    if (map=NULL)return;
+    Pair *bucketantiguo= map->buckets;
+    long capacidadantigua = map->capacity;
+    map->capacity *= 2;
 
 
 }
@@ -142,7 +146,9 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
     if (map == NULL) return NULL;
     long indice = map->current + 1;
-    while (indice < map->capacity) {
+    while (indice < map->capacity)
+    {
+
         Pair * currentPair = map->buckets[indice];
         if (currentPair != NULL && currentPair->key != NULL) {
             map->current = indice;
