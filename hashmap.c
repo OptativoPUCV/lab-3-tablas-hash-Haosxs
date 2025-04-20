@@ -142,15 +142,13 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
     if (map == NULL) return NULL;
     long indice = map->current + 1;
-    for (int i = 0; i < map->capacity; i++)
-    {
-        long posicion = (indice + i) % map->capacity;
-        Pair * currentPair = map->buckets[posicion];
-        if (currentPair != NULL && currentPair->key != NULL)
-        {
-            map->current = posicion;
+    while (indice < map->capacity) {
+        Pair * currentPair = map->buckets[indice];
+        if (currentPair != NULL && currentPair->key != NULL) {
+            map->current = indice;
             return currentPair;
         }
+        indice++;
     }
     return NULL;
 }
