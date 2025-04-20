@@ -92,7 +92,6 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {
-    if (map == NULL || key == NULL) return;
     long indice = hash(key, map->capacity);
     long copiaindice = indice;
 
