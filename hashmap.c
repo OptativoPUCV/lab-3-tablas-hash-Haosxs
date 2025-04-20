@@ -96,8 +96,7 @@ void eraseMap(HashMap * map,  char * key) {
         if (currentPair == NULL) return NULL;
         if(currentPair->key != NULL && strcmp(currentPair->key, key) == 0)
         {
-            map->current = indice;
-            return currentPair; 
+            currentPair = NULL;
         }
         indice = (indice + 1) % map->capacity;
 
