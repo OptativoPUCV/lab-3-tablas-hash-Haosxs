@@ -105,3 +105,17 @@ Sat, Apr 19, 2025  7:59:51 PM:
  tests:  5|4
 total_score: 30/70
 9d24e87
+Sat, Apr 19, 2025  8:06:34 PM: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:95:37: error: 'return' with no value, in function returning non-void [-Werror]
+     if (map == NULL || key == NULL) return;
+                                     ^~~~~~
+hashmap.c:94:8: note: declared here
+ Pair * searchMap(HashMap * map,  char * key) {
+        ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+f6444c2
