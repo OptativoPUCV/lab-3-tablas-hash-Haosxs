@@ -87,7 +87,7 @@ HashMap * createMap(long capacity)
 }
 
 void eraseMap(HashMap * map,  char * key) {
-    
+
     long indice = hash(key, map->capacity);
     long copiaindice = indice;
 
@@ -102,9 +102,6 @@ void eraseMap(HashMap * map,  char * key) {
         indice = (indice + 1) % map->capacity;
 
     } while(indice != copiaindice);
-
-    return NULL;    
-
 
 }
 
